@@ -1,4 +1,4 @@
-# Group 36 - {Walmart Sales - To See the Future, Look as the History}
+# Group 36 - {Walmart Sales - To See the Future, Look at the History}
 
 - Your title can change over time.
 
