@@ -22,7 +22,7 @@ We could imagine building a dashboard because this macro information would be he
 
 - Micheal Fang: one sentence about you!
 - Kobe Brunetti: Im a third year management student that enjoys woodworking, gardening, and golf!
-- Fumiya Hayakawa: one sentence about you!
+- Fumiya Hayakawa: I am a forth year management student who likes baseball, skiing,and swimming.
 
 ## Images
 
