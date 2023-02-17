@@ -20,7 +20,7 @@ We could imagine building a dashboard because this macro information would be he
 
 ## Team Members
 
-- Micheal Fang: one sentence about you!
+- Micheal Fang: I am a third year management student that loves to play table tennis and perform cardistry on leisure time.
 - Kobe Brunetti: Im a third year management student that enjoys woodworking, gardening, and golf!
 - Fumiya Hayakawa: I am a forth year management student who likes baseball, skiing,and swimming.
 
