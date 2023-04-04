@@ -12,6 +12,4 @@ def load_and_process(path_to_csv_file):
     .reset_index()
 
 
-    KBdf_chain1
-
     return KBdf_chain1
