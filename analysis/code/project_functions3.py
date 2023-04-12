@@ -1,8 +1,10 @@
+
+## Move method change to .py fille
 import pandas as pd
 import math
 
-def load_and_process(file_path):
-    fhdf = (
+def process_data(file_path):
+    grouped_data = (
         pd.read_csv(file_path)
           .rename(columns={'CPI': 'inflation'})
           .assign(avg_sales=lambda x: x.groupby(['inflation', 'Temperature'])['Weekly_Sales'].transform('mean'))
@@ -12,4 +14,5 @@ def load_and_process(file_path):
           .agg({'avg_sales_ceil': 'mean'})
           .reset_index()
     )
-    return fhdf
+    return grouped_data
+
