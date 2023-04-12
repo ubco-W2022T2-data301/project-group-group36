@@ -26,7 +26,7 @@ MFdf2 = (MFdf1
 MFdf_topSales = MFdf2.head(15)
 MFdf_worseSales = MFdf2.tail(15)
 
-MFdf_topSales
+
 
 
 # function of data wrangling
