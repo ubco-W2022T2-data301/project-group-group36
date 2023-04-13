@@ -47,15 +47,15 @@ Overall, there are many factors that go into predicting future sales and their t
 
 ### How are sales affected by holidays, and is it possible to predict exceptional good/bad sales based on existing holidays, or the neighboring weeks of sales?
 
-<img src ="images/test.png" width="100px">
+<img src ="images/M1.PNG" width="100px">
 
 The data indicates that the average weekly sales of 45 stores generally fluctuate around a small range of 0.9 - 1.1 million. However, looking at the line graph, there are exceptional periods where big jumps or dips in sales are seen. Holiday periods marked with the red lines, appear to be aligned with the biggest jumps in sales.
 
-<img src ="images/test.png" width="100px">
+<img src ="images/M2.PNG" width="100px">
 
 By separating out the 15 best weeks and 15 worse weeks of sale, we can see that three of the weeks that have a holiday lies within the top week. One exception is week 47 being one of the worse weeks, this could be the result of the preceding week being the highest week of sales. We could estimate that there might have been a change in operating strategy and there was a presale, resulting in a rebound in consumer demand. 
 
-<img src ="images/test.png" width="100px">
+<img src ="images/M3.PNG" width="100px">
 
 In this chart, we have showcased the week-over-week percentage(percentage change of the current week's sales compared to the preceding week) for the best and worse weeks. We can see that almost all of the best weeks have a big positive percentage, indicating the best weeks were a big jump compared to the preceding week. Most of the WoW percent for the worse weeks is negative, indicating the worse weeks of sales saw a big decrease compared to the preceding week. It seems that monitoring the WoW change indicator might not help identify potential sales trends due to the unpredictable fluctuations.
 
