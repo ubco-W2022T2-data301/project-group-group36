@@ -554,64 +554,7 @@
       </table>
       <simple-id uuid='{B882004E-A10E-4239-B3D8-B29718F55D3C}' />
     </worksheet>
-    <worksheet name='Sales trend 2010-2012'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='MFdf1_byweeks' name='federated.0bgf7og1njn8bm1glsvc616nifdj' />
-          </datasources>
-          <datasource-dependencies datasource='federated.0bgf7og1njn8bm1glsvc616nifdj'>
-            <column caption='Holiday Flag' datatype='real' name='[Holiday_Flag]' role='measure' type='quantitative' />
-            <column datatype='integer' name='[Week#]' role='dimension' type='quantitative' />
-            <column caption='Weekly Sales' datatype='real' name='[Weekly_Sales]' role='measure' type='quantitative' />
-            <column-instance column='[Holiday_Flag]' derivation='None' name='[none:Holiday_Flag:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Week#]' derivation='None' name='[none:Week#:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[Weekly_Sales]' derivation='Sum' name='[sum:Weekly_Sales:qk]' pivot='key' type='quantitative' />
-          </datasource-dependencies>
-          <filter class='quantitative' column='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Holiday_Flag:qk]' included-values='in-range'>
-            <min>0.0</min>
-            <max>1.0</max>
-          </filter>
-          <filter class='quantitative' column='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' included-values='in-range' />
-          <slices>
-            <column>[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Holiday_Flag:qk]</column>
-            <column>[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='axis'>
-            <format attr='title' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' scope='rows' value='Weekly Sales (Dollars)' />
-            <encoding attr='space' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' field-type='quantitative' max='1900000.0' min='800000.0' range-type='fixed' scope='rows' type='space' />
-            <format attr='title' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]' scope='cols' value='Week Number' />
-            <encoding attr='space' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]' field-type='quantitative' max='145' min='0' range-type='fixed' scope='cols' type='space' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <mark-sizing mark-sizing-setting='marks-scaling-off' />
-            <encodings>
-              <color column='[federated.0bgf7og1njn8bm1glsvc616nifdj].[:Measure Names]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='size' value='1.2193922996520996' />
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='false' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]</rows>
-        <cols>[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]</cols>
-      </table>
-      <simple-id uuid='{7397F659-B54D-4E06-BE40-A4E47D2C9D4F}' />
-    </worksheet>
-    <worksheet name='Sales trend 2010-2012 (2)'>
+    <worksheet name='Average weekly sales, with Holidays marked 2010-2012'>
       <table>
         <view>
           <datasources>
@@ -645,8 +588,8 @@
             <encoding attr='space' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]' field-type='quantitative' max='145' min='0' range-type='fixed' scope='cols' type='space' />
             <encoding attr='space' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Holiday_Flag:qk]' field-type='quantitative' fold='true' major-origin='0.0' major-show='false' major-spacing='1.0' scope='rows' type='space' />
             <format attr='title' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Holiday_Flag:qk]' scope='rows' value='' />
-            <format attr='width' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' value='24' />
-            <format attr='width' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Holiday_Flag:qk]' value='24' />
+            <format attr='width' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' value='96' />
+            <format attr='width' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Holiday_Flag:qk]' value='96' />
           </style-rule>
         </style>
         <panes>
@@ -706,6 +649,63 @@
         <cols>[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]</cols>
       </table>
       <simple-id uuid='{6E65720D-F64C-4943-94F5-79324F69BDE7}' />
+    </worksheet>
+    <worksheet name='Sales trend 2010-2012'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='MFdf1_byweeks' name='federated.0bgf7og1njn8bm1glsvc616nifdj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bgf7og1njn8bm1glsvc616nifdj'>
+            <column caption='Holiday Flag' datatype='real' name='[Holiday_Flag]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Week#]' role='dimension' type='quantitative' />
+            <column caption='Weekly Sales' datatype='real' name='[Weekly_Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Holiday_Flag]' derivation='None' name='[none:Holiday_Flag:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Week#]' derivation='None' name='[none:Week#:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Weekly_Sales]' derivation='Sum' name='[sum:Weekly_Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Holiday_Flag:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>1.0</max>
+          </filter>
+          <filter class='quantitative' column='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Holiday_Flag:qk]</column>
+            <column>[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' scope='rows' value='Weekly Sales (Dollars)' />
+            <encoding attr='space' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]' field-type='quantitative' max='1900000.0' min='800000.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]' scope='cols' value='Week Number' />
+            <encoding attr='space' class='0' field='[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]' field-type='quantitative' max='145' min='0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0bgf7og1njn8bm1glsvc616nifdj].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.2193922996520996' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bgf7og1njn8bm1glsvc616nifdj].[sum:Weekly_Sales:qk]</rows>
+        <cols>[federated.0bgf7og1njn8bm1glsvc616nifdj].[none:Week#:qk]</cols>
+      </table>
+      <simple-id uuid='{7397F659-B54D-4E06-BE40-A4E47D2C9D4F}' />
     </worksheet>
     <worksheet name='Top and worse weeks of sale'>
       <table>
@@ -1159,7 +1159,7 @@
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98826' id='7' param='horz' type-v2='layout-flow' w='99286' x='357' y='587'>
             <zone fixed-size='1192' h='98826' id='5' is-fixed='true' type-v2='layout-basic' w='53119' x='357' y='587'>
-              <zone h='59434' id='11' name='  Week over week Changes of' w='26550' x='357' y='39979'>
+              <zone h='59435' id='11' name='  Week over week Changes of' w='26550' x='357' y='39978'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -1167,7 +1167,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='59434' id='16' name='Top and worse weeks of sale' w='26569' x='26907' y='39979'>
+              <zone h='59435' id='16' name='Top and worse weeks of sale' w='26569' x='26907' y='39978'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -1175,7 +1175,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='39392' id='27' name='Sales trend 2010-2012 (2)' w='53119' x='357' y='587'>
+              <zone h='39391' id='27' name='Average weekly sales, with Holidays marked 2010-2012' w='53119' x='357' y='587'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -1226,7 +1226,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='6159' id='28' name='Sales trend 2010-2012 (2)' pane-specification-id='2' param='[federated.0bgf7og1njn8bm1glsvc616nifdj].[:Measure Names]' type-v2='color' w='1426' x='98217' y='21190'>
+              <zone h='6159' id='28' name='Average weekly sales, with Holidays marked 2010-2012' pane-specification-id='2' param='[federated.0bgf7og1njn8bm1glsvc616nifdj].[:Measure Names]' type-v2='color' w='1426' x='98217' y='21190'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -1328,7 +1328,7 @@
       <simple-id uuid='{9DD17A2F-6F13-4292-A702-BAF3623587A1}' />
     </dashboard>
   </dashboards>
-  <windows source-height='61'>
+  <windows source-height='75'>
     <window class='worksheet' name='Sales trend 2010-2012'>
       <cards>
         <edge name='left'>
@@ -1357,7 +1357,7 @@
       </cards>
       <simple-id uuid='{A6D0C295-BA75-4F5A-9CBC-1571A5139F3E}' />
     </window>
-    <window class='worksheet' name='Sales trend 2010-2012 (2)'>
+    <window class='worksheet' name='Average weekly sales, with Holidays marked 2010-2012'>
       <cards>
         <edge name='left'>
           <strip size='240'>
@@ -1370,7 +1370,7 @@
           <strip size='48'>
             <card type='columns' />
           </strip>
-          <strip size='48'>
+          <strip size='300'>
             <card type='rows' />
           </strip>
           <strip size='46'>
@@ -1401,7 +1401,7 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='31'>
+          <strip size='30'>
             <card type='title' />
           </strip>
         </edge>
@@ -1426,7 +1426,7 @@
           <strip size='48'>
             <card type='columns' />
           </strip>
-          <strip size='48'>
+          <strip size='87'>
             <card type='rows' />
           </strip>
           <strip size='46'>
@@ -1486,7 +1486,7 @@
         </viewpoint>
         <viewpoint name='Weekly sales ranked 2010-2012' />
       </viewpoints>
-      <active id='3' />
+      <active id='4' />
       <simple-id uuid='{EB2FDA1E-34C3-4B31-96B4-A6A016F57872}' />
     </window>
     <window class='dashboard' maximized='true' name='Dashboard 1 (2)'>
@@ -1494,7 +1494,7 @@
         <viewpoint name='  Week over week Changes of'>
           <zoom type='entire-view' />
         </viewpoint>
-        <viewpoint name='Sales trend 2010-2012 (2)'>
+        <viewpoint name='Average weekly sales, with Holidays marked 2010-2012'>
           <zoom type='entire-view' />
         </viewpoint>
         <viewpoint name='Top and worse weeks of sale'>
