@@ -9,12 +9,12 @@ Our dataset has a wide range of data from the individual store locations. Some o
 
 
 ### Walmart Store's Weekly Sales
-<img src ="images/test.png" width="700px">
+<img src ="images/Kobe1.png" width="700px">
 
 performers as the last 5 store  trend lines. The two massive spikes both start in late November and end during the middle to end of December. In order to clean this up, we took the average of all the stores weekly sales and plotted them, shown below.
 
 ### Walmart's Average Store Weekly Sales 
-<img src ="images/test.png" width="700px">
+<img src ="images/Kobe2.png" width="700px">
 
 Here it is easier to see the individual weekly fluctuations in sales. With the second largest spike in sales happening the last week of November, and the largest spike happening mid December, showing how heavily the Christmas holiday season affects consumer’s shopping behaviour. Throughout the remainder of the year it is seen that fluctuates are constant, but they tend to be more steady and similar in change. 
 Furthermore, we visualized our database by a heatmap to identify the relationship between all variables. This heatmap gives us a idea of which variables affect weekly sales.
@@ -29,15 +29,15 @@ As you can see from the above graph, it appears that CPI, fuel price, temperatur
 
 ### Can Walmart's future sale predictions be accurately made using estimates based on only their store location’s past historical sales?
 
-<img src ="images/test.png" width="700px">
+<img src ="images/Kobe3.png" width="700px">
 
 This visualization is used to see the trending changes that happen throughout the year, to see if they stay consistent with each other. It is very evident that the stores highest sales come from the Christmas holiday season, shown with the yearly spike in the sales ROC during the end of November to the middle of December. There is also a decline in the sales ROC in January, following the holiday, and expectable increases around the summer season (June and July) and the school season (End of August to the start of September). The weekly sales ROC supports that these changes in weekly sales follow yearly repeated trends. This proves that sales vary by the date, and seasonality/holidays is one of the majour causes. An average of these week to week rate of change was taken and applied to each individual week to derive our predictions
 
-<img src ="images/test.png" width="700px">
+<img src ="images/Kobe4.png" width="700px">
 
 Here the sales have been broken down into the individual year, and separated by week number where 0 is the first week of January and 52 is the last week of December. It is clear that the predictions made for 2012 are quite similar to the actual sales of 2012, and are very similar to the weekly trends of every year. Here we can see that the predictions match the lower than average January sales, represented by weeks 1 to 4. Then the weekly values stay consistent in their small fluctuations throughout the year, until it finally hits its first peak at the end of November, represented by week 46. These predictions seem accurate, but a direct comparison will show the exact differences in their trends.  
 
-<img src ="images/test.png" width="700px">
+<img src ="images/Kobe5.png" width="700px">
 
 Throughout the year, the 2012 predictions (red line) stay steadily consistent with the actual values from 2012 (blue line). This shows how future sales can be predicted based on past historical sales, within a reasonable range of the actual sales. For these calculations, the variance from the real values in this case was calculated to be $25,473, which is not bad when we're considering millions in sales. 
 
